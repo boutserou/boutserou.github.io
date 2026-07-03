@@ -1,0 +1,37 @@
+.hero-section{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.about-section{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    justify-items: center;
+    padding: 60px 0;
+}
+
+.about-left{
+    border-radius: 72px;
+    background: gray;
+    height: 500px;
+    width: 350px;
+}
+.about-left img{
+    height: 500px;
+    border-radius: 72px;
+    width: 350px;
+    object-fit: cover;
+}
+.about-buttons{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+    a{
+        text-decoration: none;
+        font-size: 22px;
+        transition: var(--transition);
+    }
+}

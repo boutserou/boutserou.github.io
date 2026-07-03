@@ -1,0 +1,19 @@
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar ul{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    list-style: none;
+    li{
+        font-size: 32px;
+        padding-bottom: 16px;
+        a{
+            text-decoration: none;
+            transition: var(--transition);
+        }
+    }
+}

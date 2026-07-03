@@ -1,0 +1,10 @@
+.home-projects{
+    margin-top: 100px;
+    padding: 60px 0;
+}
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px 12px;
+    padding: 40px 0;
+}
