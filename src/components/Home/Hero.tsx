@@ -1,7 +1,25 @@
 import "./Hero.css";
 import JoImage from "../../assets/images/jo.jpg";
 
+import { gsap, useGSAP } from "../../lib/gsap";
+
+
 export default function Hero() {
+    useGSAP(() => {
+        gsap.from(".hero-section", {
+        opacity: 0,
+        y: -80,
+        duration: 0.6,
+        ease: "power1.in",
+        });
+        gsap.from(".about-section",{
+            opacity: 0,
+            y: 80,
+            duration: 0.6,
+            ease: "power1.out",
+        })
+    });
+
     return (
         <div className="rel">
             <section className="hero-section">

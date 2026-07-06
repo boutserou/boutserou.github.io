@@ -13,7 +13,7 @@
     overflow-y: auto;
     background: white;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 26px;
     position: relative;
 }
 .close-button {
@@ -30,6 +30,18 @@
     grid-template-columns: repeat(2,1fr);
     padding: 20px 0;
     gap: 40px;
+}
+.modal-list-l,
+.modal-list-r {
+    h3{padding-bottom: 6px;}
+    ul{list-style: none;}
+}
+.modal-list-r ul{
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 120px;
 }
 .project-modal img{
     max-height: 400px;

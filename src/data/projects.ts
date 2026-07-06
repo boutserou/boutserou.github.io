@@ -52,7 +52,7 @@ export const projects: Project[] = [
         longDescription: "This was my favourite project to work on while at WEDOO DIGITAL AGENCY. Starting from scratch, the code was clear written. The design was made following a figma template. Unfortunately I didn't get to finish this project during my time as an intern, and certain pages and functions I created were afterwards cut off. It's still an ongoing project at the agency so the link will change once finished.",
         year:2026,
         technologies: ["WordPress","Custom ACF Blocks","PHP","Archive Page","GSAP"],
-        developmentProcess: ["Sorted fonts,gradients and variables in ready-to-use css classes.","Created ACF Blocks based on repeatable sections.","Created a custom Projects Archive page with 4 taxonomies, to showcase projects.","Created a project page with a common PHP template for every project.","Customised the New's page and every article's template using PHP."],
+        developmentProcess: ["Sorted fonts,gradients and variables in ready-to-use css classes.","Created ACF Blocks based on repeatable sections.","Created a custom Projects Archive page with 4 taxonomies, to showcase projects.","Customised the New's page and every article's template using PHP."],
         image: AtaxtoiImage,
         liveUrl: "https://ataxtoi.pcinfo.work",
         featured:true

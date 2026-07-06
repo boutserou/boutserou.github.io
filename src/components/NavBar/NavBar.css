@@ -1,12 +1,13 @@
 .nav-bar{
     display: flex;
     flex-direction: column;
-}
-.nav-bar ul{
+    z-index: 9999;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
+}
+.nav-bar ul{
     list-style: none;
     li{
         font-size: 32px;

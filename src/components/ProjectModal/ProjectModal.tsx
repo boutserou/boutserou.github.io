@@ -2,6 +2,7 @@ import "./ProjectModal.css";
 import type { Project } from "../../types/Project";
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface ProjectModalProps {
     readonly project: Project;
@@ -27,16 +28,10 @@ export default function ProjectModal(
     }, []);
 
 
-    return (
+    return createPortal(
         <div className="project-modal-overlay" onClick={onClose}>
-            
-
             <div className="project-modal" onClick={(e) => e.stopPropagation()}>
-
-                <button
-                    className="close-button"
-                    onClick={onClose}
-                >
+                <button className="close-button" onClick={onClose}>
                     ✕
                 </button>
 
@@ -45,7 +40,7 @@ export default function ProjectModal(
                 <p>{project.longDescription}</p>
 
                 <div className="modal-grid">
-                    <div className="modal-list">
+                    <div className="modal-list-l">
                         <h3>Development Process</h3>
 
                         <ul>
@@ -55,9 +50,9 @@ export default function ProjectModal(
                         </ul>
                     </div>
 
-                    <div className="modal-list">
+                    <div className="modal-list-r">
                         <h3>Technologies Used:</h3>
-                        
+
                         <ul>
                             {project.technologies.map((technology) => (
                                 <li key={technology}>
@@ -67,7 +62,7 @@ export default function ProjectModal(
                         </ul>
                     </div>
                 </div>
-                
+
                 <img
                     src={project.image}
                     alt={project.title}
@@ -80,9 +75,8 @@ export default function ProjectModal(
                 >
                     Visit Website
                 </a>
-
             </div>
-
-        </div>
+        </div>,
+        document.body
     );
 }

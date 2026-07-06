@@ -6,9 +6,8 @@ import { useState } from "react";
 import ProjectModal from "../ProjectModal/ProjectModal";
 import type { Project } from "../../types/Project";
 
-
 export default function FeaturedProjects() {
-    
+
     const [selectedProject, setSelectedProject] =
         useState<Project | null>(null);
     

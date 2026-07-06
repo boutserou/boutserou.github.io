@@ -31,4 +31,5 @@ export default function ProjectCard({
             <button className="project-card-link" onClick={() => onOpen(project)}></button>
         </article>
     );
+
 }
