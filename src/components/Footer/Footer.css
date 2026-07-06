@@ -1,0 +1,24 @@
+.footer{
+    width: 90%;
+    min-height: 200px;
+    background: var(--text-color);
+    padding: 80px 80px 60px;
+    border-top-right-radius: 100%;
+    text-align: left;
+    color: var(--background);
+}
+.footer-logo{
+    font-size: 52px;
+    font-weight: 600;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--background);
+    font-size: 42px;
+}
+.footer a:hover{color: var(--text-hover);}
+.footer ul{
+    list-style: none;
+    font-size: 18px;
+    li{padding: 6px 12px 0 ;}
+}

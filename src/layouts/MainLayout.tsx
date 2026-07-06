@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -26,6 +27,7 @@ export default function MainLayout() {
           <main className="grid">
             <Outlet />
           </main>
+          <Footer />
         </div>
       </div>
     </>
