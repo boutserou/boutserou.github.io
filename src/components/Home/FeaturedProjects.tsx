@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
     return ( 
         <>
             <section className="home-projects">
-                <h2>Projects</h2>
+                <h2>Featured Projects</h2>
                 <div className="project-grid">
                     {projects
                         .filter(project => project.featured)
