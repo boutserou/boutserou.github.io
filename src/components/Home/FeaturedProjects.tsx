@@ -14,7 +14,10 @@ export default function FeaturedProjects() {
     return ( 
         <>
             <section className="home-projects">
-                <h2>Featured Projects</h2>
+                <div className="projects-flex">
+                    <h2>Featured Projects</h2>
+                    <a href="/Projects">See More</a>
+                </div>
                 <div className="project-grid">
                     {projects
                         .filter(project => project.featured)
@@ -23,9 +26,7 @@ export default function FeaturedProjects() {
                             <ProjectCard
                                 key={project.id}
                                 project={project}
-                                onOpen={setSelectedProject}
-                            />
-
+                                onOpen={setSelectedProject}/>
                         ))}
 
                 </div>

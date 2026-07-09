@@ -19,6 +19,29 @@
 .footer a:hover{color: var(--text-hover);}
 .footer ul{
     list-style: none;
-    font-size: 18px;
-    li{padding: 6px 12px 0 ;}
+    li{
+        padding: 6px 12px 0 ;
+        a{
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width:1680px) {
+    .footer{
+        width: 100%;
+    }
+}
+@media (max-width:1440px){
+    .footer{
+        border-radius: 0;
+        padding: 60px;
+    }
+    .footer-logo{font-size: 46px;}
+    .footer a{font-size: 36px;}
+}
+@media(max-width:680px){
+    .footer{
+        padding: 40px;
+    }
+    .footer-logo{font-size: 42px;}
 }

@@ -25,7 +25,9 @@ export default function MainLayout() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="grid">
-            <Outlet />
+            <div className="gutter">
+              <Outlet />
+            </div>
           </main>
           <Footer />
         </div>

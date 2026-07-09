@@ -2,9 +2,38 @@
     margin-top: 100px;
     padding: 60px 0;
 }
+.projects-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects-flex a{
+    text-decoration: none;
+    font-size: 28px;
+    &:hover{
+        transform: translateY(2px);
+    }
+}
 .project-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 24px 12px;
     padding: 40px 0;
+}
+@media (max-width:1220px){
+    .project-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:868px){
+    .project-grid{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:670px){
+    .projects-flex{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-projects{margin-top: 0;}
 }

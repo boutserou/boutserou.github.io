@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, .7);
-    z-index: 999;
+    z-index: 9999;
 }
 .project-modal {
     width: 1340px;
@@ -15,6 +15,7 @@
     border-radius: 20px;
     padding: 26px;
     position: relative;
+    margin: 0 40px;
 }
 .close-button {
     position: absolute;
@@ -44,7 +45,7 @@
     max-height: 120px;
 }
 .project-modal img{
-    max-height: 400px;
+    max-height: 380px;
     border-radius: 20px;
     display: block;
     margin: 0 auto;
@@ -56,4 +57,17 @@
     text-align: center;
     display: block;
     padding-top: 12px;
+}
+@media (max-width:1660px){
+    .project-modal img{max-height: 320px;}
+}
+@media (max-width:1068px){
+    .project-modal{padding: 32px;}
+    .modal-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+@media(max-width:870px){
+    .project-modal img{width: 80%;}
 }

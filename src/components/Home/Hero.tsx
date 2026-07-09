@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="rel">
             <section className="hero-section">
                 <h1>Joanna Boutserou</h1>
-                <h2>Frontend Developer</h2>
+                <h2>Software Developer</h2>
             </section>
 
             <section className="about-section">

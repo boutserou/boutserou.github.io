@@ -11,6 +11,7 @@
 .tech-tabs{
     display:flex;
     justify-content:center;
+    flex-wrap: wrap;
     gap:60px;
 }
 .tech-tabs button{
@@ -20,7 +21,12 @@
     font:inherit;
     font-size:26px;
     position:relative;
+    transition: var(--transition);
     padding-bottom:8px;
+}
+.tech-tabs button:hover{
+    color: var(--text-hover);
+    transform: translateY(3px);
 }
 .tech-tabs button::after{
     content:"";
@@ -88,4 +94,57 @@
     background: var(--background);
 }
 
-
+@media(max-width:1220px){
+    .tech-tabs{gap: 2rem;}
+}
+@media(max-width:960px){
+    .tech-flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .circle{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .timeline{
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 20px 0;
+    }
+    .timeline::before{
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        right: auto;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    .tech-node{
+        width: 100%;
+        position: relative;
+    }
+    .tech-node.top{
+        align-items: flex-end;
+        text-align: right;
+        padding-right: calc(50% + 24px);
+    }
+    .tech-node.bottom{
+        align-items: flex-start;
+        text-align: left;
+        padding-left: calc(50% + 24px);
+    }
+    .tech-node.top span,
+    .tech-node.bottom span{
+        padding: 0;
+    }
+    .tech-node.top .circle,
+    .tech-node.bottom .circle{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

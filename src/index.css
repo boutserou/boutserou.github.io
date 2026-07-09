@@ -38,6 +38,10 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+.gutter{margin: 0 40px;}
+@media(max-width:1220px){
+  .grid{max-width: 1000px;}
+}
 .rel{position: relative;}
 
 h1 {font-size: 62px;}

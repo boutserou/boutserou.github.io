@@ -2,15 +2,14 @@
     text-align: center;
     padding: 40px 0;
 }
-
 .about-section{
     display: grid;
     grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
     align-items: center;
     justify-items: center;
     padding: 60px 0;
 }
-
 .about-left{
     border-radius: 72px;
     background: gray;
@@ -33,5 +32,19 @@
         text-decoration: none;
         font-size: 22px;
         transition: var(--transition);
+    }
+}
+@media(max-width:870px){
+    .hero-section{
+        padding: 80px 0 0;
+    }
+    .about-section{
+        grid-template-columns: 1fr;
+        max-width: 690px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .about-buttons{
+        justify-content: center;
     }
 }
