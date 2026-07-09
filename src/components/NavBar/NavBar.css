@@ -56,5 +56,9 @@
     list-style:none;
     padding: 24px;
     border-radius: 4px;
-    background: var(--background);
+    opacity:0;
+    visibility:hidden;
+}
+.burger:disabled{
+    pointer-events:none;
 }

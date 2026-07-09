@@ -29,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 20px 0;
-    gap: 40px;
+    gap: 60px;
 }
 .modal-list-l,
 .modal-list-r {

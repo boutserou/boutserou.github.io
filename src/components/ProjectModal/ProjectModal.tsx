@@ -3,6 +3,7 @@ import type { Project } from "../../types/Project";
 
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { useUI } from "../../context/UIContent";
 
 interface ProjectModalProps {
     readonly project: Project;
@@ -11,6 +12,7 @@ interface ProjectModalProps {
 
 
 export default function ProjectModal(
+    
     {
         project,
         onClose,
@@ -18,15 +20,22 @@ export default function ProjectModal(
     {
 
     useEffect(() => {
+        setIsMenuOpen(false);
+        setIsModalOpen(true);
+
         document.body.style.overflowY = "hidden";
         document.documentElement.style.overflowY = "hidden";
-
         return () => {
+            setIsModalOpen(false);
             document.body.style.overflowY = "";
             document.documentElement.style.overflowY = "";
         };
     }, []);
 
+    const {
+        setIsMenuOpen,
+        setIsModalOpen,
+    } = useUI();
 
     return createPortal(
         <div className="project-modal-overlay" onClick={onClose}>
