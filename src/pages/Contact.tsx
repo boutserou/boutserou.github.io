@@ -1,3 +1,7 @@
+import ContactIntro from "../components/Contact/ContactIntro"
+
 export default function Contact() {
-  return <h1>Contact</h1>;
+  return (
+      <ContactIntro/>
+  );
 }

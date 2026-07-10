@@ -1,0 +1,39 @@
+.contact-intro{
+    min-height: 70vh;
+}
+.contact-intro h1{
+    text-align: center;
+    padding: 60px 0 20px;
+}
+.contact-intro p{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 840px;
+    padding-bottom: 60px;
+}
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.social-icon{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+}
+.social-icon img{
+    width: 180px;
+    padding: 20px;
+}
+.social-icon a{
+    text-decoration: none;
+    transition: var(--transition);
+}
+@media (max-width:800px){
+    .contact-intro h1{
+        padding-top: 100px;
+    }
+}

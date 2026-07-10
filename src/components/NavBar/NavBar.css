@@ -13,6 +13,7 @@
             text-decoration: none;
             transition: var(--transition);
             color: var(--background);
+            &:hover{color: var(--text-hover);}
         }
     }
 }

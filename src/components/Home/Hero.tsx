@@ -36,7 +36,7 @@ export default function Hero() {
                 </div>
                 <div className="about-right">
                     <h2>About me</h2>
-                    <p>I am an Informatics Technician Graduate with experience in Web Development. I am highly interested in Software Development, and have general knowledge in all sorts of applications and frameworks.</p>
+                    <p>I am an Informatics Technician graduate with professional experience in Web Development. Passionate about software development and modern web technologies, I enjoy creating responsive, user-focused digital experiences while continuously expanding my skills through new frameworks, tools, and real-world projects.</p>
                     <div className="about-buttons">
                         <a href="/">Read More</a>
                         <a href="/contact">Get In Touch</a>

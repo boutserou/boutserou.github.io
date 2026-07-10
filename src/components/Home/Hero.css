@@ -31,7 +31,6 @@
     a{
         text-decoration: none;
         font-size: 22px;
-        transition: var(--transition);
     }
 }
 @media(max-width:870px){

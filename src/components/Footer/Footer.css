@@ -6,6 +6,7 @@
     border-top-right-radius: 100%;
     text-align: left;
     color: var(--background);
+    position: relative;
 }
 .footer-logo{
     font-size: 52px;
@@ -25,6 +26,12 @@
             font-size: 18px;
         }
     }
+}
+.footer p{
+    color: var(--background);
+    font-size: 16px;
+    position: absolute;
+    bottom: 8px;
 }
 @media (max-width:1680px) {
     .footer{
