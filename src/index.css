@@ -54,3 +54,7 @@ a:hover{
   transform: translateY(2px);
   color: var(--text-hover);
 }
+.projects{
+  min-height: 70vh; 
+  padding: 60px 0;
+}

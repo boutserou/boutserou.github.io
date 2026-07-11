@@ -11,13 +11,15 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 export default function MainLayout() {
   useGSAP(() => {
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1,
-      effects: true,
-    });
-  }, []);
+  if (!ScrollSmoother.get()) {
+      ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1,
+        effects: true,
+      });
+    }
+  });
 
   return (
     <>
