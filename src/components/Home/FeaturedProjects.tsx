@@ -16,7 +16,6 @@ export default function FeaturedProjects() {
             <section className="home-projects">
                 <div className="projects-flex">
                     <h2>Featured Projects</h2>
-                    <a href="/Projects">See More</a>
                 </div>
                 <div className="project-grid">
                     {projects

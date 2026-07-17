@@ -8,7 +8,7 @@ import { useUI } from "../../context/UIContent";
 
 export default function NavBar() {
     const location = useLocation();
-    const menuRef = useRef<HTMLUListElement>(null);
+    const mobileMenuRef = useRef<HTMLUListElement>(null);
     const tl = useRef<GSAPTimeline | null>(null);
     const {
         isMenuOpen,
@@ -18,9 +18,9 @@ export default function NavBar() {
 
     useGSAP(() => {
 
-        if (!menuRef.current) return;
+        if (!mobileMenuRef.current) return;
 
-        gsap.set(menuRef.current, {
+        gsap.set(mobileMenuRef.current, {
             autoAlpha: 0,
             y: -20,
         });
@@ -28,14 +28,14 @@ export default function NavBar() {
         tl.current = gsap.timeline({ paused: true });
 
         tl.current
-            .to(menuRef.current, {
+            .to(mobileMenuRef.current, {
                 autoAlpha: 1,
                 y: 0,
                 duration: 0.3,
                 ease: "power2.out",
             })
             .from(
-                ".nav-menu li",
+                ".mobile-nav li",
                 {
                     x: -20,
                     opacity: 0,
@@ -45,16 +45,21 @@ export default function NavBar() {
                 },
                 "-=0.15"
             );
+
     }, []);
 
     useEffect(() => {
+
         if (!tl.current) return;
+
+        if (window.innerWidth > 768) return;
 
         if (isMenuOpen) {
             tl.current.play();
         } else {
             tl.current.reverse();
         }
+
     }, [isMenuOpen]);
 
     useEffect(() => {
@@ -62,10 +67,24 @@ export default function NavBar() {
     }, [location.pathname, setIsMenuOpen]);
 
     const closeMenu = () => setIsMenuOpen(false);
-    
 
     return (
         <nav className="nav-bar">
+
+            {/* Desktop */}
+            <div className="desktop-nav">
+                <Link to="/" className="nav-logo">JOANNA BOUTSEROU</Link>
+                <ul>
+                    <li><Link to="/projects">SKILLS</Link></li>
+                    <li><Link to="/projects">PROJECTS</Link></li>
+                    <li><Link to="/contact">CONTACT</Link></li>
+                    <li><Link to="/contact">GET IN TOUCH</Link></li>
+                </ul>
+            </div>
+            
+
+            {/* Mobile */}
+
             <button
                 disabled={isModalOpen}
                 className={`burger ${isMenuOpen ? "open" : ""}`}
@@ -76,12 +95,16 @@ export default function NavBar() {
                 <span />
             </button>
 
-            <ul ref={menuRef} className="nav-menu">
+            <ul
+                ref={mobileMenuRef}
+                className="mobile-nav"
+            >
                 <li><Link to="/" onClick={closeMenu}>Home</Link></li>
                 <li><Link to="/about" onClick={closeMenu}>About</Link></li>
                 <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
                 <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
             </ul>
+
         </nav>
     );
 }

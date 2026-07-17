@@ -24,7 +24,7 @@
     border-radius: 20px;
 }
 .project-content{
-    padding: 6px 12px;
+    padding: 6px 12px 12px;
 }
 .project-header{
     display: flex;
@@ -34,8 +34,10 @@
     width: max-content;
     margin-left: auto;
     transition: var(--transition);
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
 }
-
 .project-card:hover{
     transform: translateY(-8px);
     .project-arrow{color: var(--text-hover);}

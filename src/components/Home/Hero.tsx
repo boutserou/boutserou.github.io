@@ -22,28 +22,26 @@ export default function Hero() {
     });
 
     return (
-        <div className="rel">
-            <section className="hero-section">
+        <section className="about-section">
+            <div className="about-left">
+                <img
+                    src={JoImage}
+                    alt="Joanna"
+                />
+            </div>
+            <div className="right-about">
                 <h1>Joanna Boutserou</h1>
-                <h2>Software Developer</h2>
-            </section>
-
-            <section className="about-section">
-                <div className="about-left">
-                    <img
-                        src={JoImage}
-                        alt="Joanna"
-                    />
-                </div>
+                <p className="developer">Software Developer</p>
                 <div className="about-right">
                     <h2>About me</h2>
-                    <p>I am an Informatics Technician graduate with professional experience in Web Development. Passionate about software development and modern web technologies, I enjoy creating responsive, user-focused digital experiences while continuously expanding my skills through new frameworks, tools, and real-world projects.</p>
-                    <div className="about-buttons">
-                        <Link to="/about">Read More</Link>
-                        <Link to="/contact">Get In Touch</Link>
-                    </div>
+                    <p>I am an Informatics Technician graduate with experience in Web development. I am currently based in Athens, Greece. Passionate about development, I enjoy creating responsive, user-focused digital experiences while continuously expanding my skills through new frameworks, tools, and real-world projects.</p>
                 </div>
-            </section>
-        </div>
+                <div className="about-buttons">
+                    <Link to="/">Download CV</Link>
+                    <Link to="/contact">Get In Touch</Link>
+                </div>
+            </div>
+            
+        </section>
     );
 }

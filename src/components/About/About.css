@@ -1,29 +1,9 @@
-.about-hero{
-    h1{
-        text-align: center;
-        padding: 60px 0;
-    }
-}
-.whoiam{
-    display: grid;
-    grid-template-columns: 1.8fr 1fr;
-    gap: 20px;
-    align-items: center;
+.journey {
+    min-height: 60vh;
+    display: flex;
     justify-items: center;
-    padding: 60px 0;
-    p{
-        padding-bottom: 3px;
-    }
-    img{
-        border-radius: 72px;
-        object-fit: cover;
-        object-position: top;
-        height: 500px;
-        width: 350px;
-    }
-}
-.journey{
-    padding: 120px 0;
+    flex-direction: column;
+    justify-content: center;
     h2{text-align: center;}
 }
 .journey-grid{
@@ -32,6 +12,7 @@
     gap: 20px;
     justify-items: center;
     align-content: center;
+    padding: 0 40px;
 }
 .journey-step{
     margin: 60px 0;

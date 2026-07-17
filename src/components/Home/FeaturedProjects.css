@@ -1,6 +1,5 @@
 .home-projects{
-    margin-top: 100px;
-    padding: 60px 0;
+    padding: 60px;
 }
 .projects-flex{
     display: flex;
@@ -13,9 +12,9 @@
 }
 .project-grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 24px 12px;
-    padding: 40px 0;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    padding: 60px 120px;
 }
 @media (max-width:1220px){
     .project-grid{
